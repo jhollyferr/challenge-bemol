@@ -88,11 +88,15 @@ Para executar aplicação é necessário que você possua o [Docker](https://doc
 1. Acesse este diretório (packages/api)
 2. Abra o Terminal na raiz do diretório
 3. Pare a execução de todos os volumes, imagens e containers, caso já possua o Docker e o Docker Componse
+   
    `docker system prune -a --volumes --images` ou `sudo docker system prune -a --volumes --images`
+
    e
+
    `docker compose down` ou `sudo docker compose down`
 4. Execute o seguinte comando
    `docker compose up` ou `sudo docker compose up`
+   
    Com isso o Docker irá gerenciar a instalação das dependências da aplicação e definir as configurações da base de dados, desta forma você deve obter o seguinte resultado do MySQL sendo executando em um container Docker (destaque em branco)
    <img src="./img/01.png" alt="Instância MySQL no Docker Container"/>
    E o nosso servidor em outro container executando na porta 3000 conforme mostra a imagem abaixo
