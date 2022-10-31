@@ -1,2 +1,2 @@
-create database if not exists bemol;
-use bemol;
+create database if not exists challenge;
+use challenge;

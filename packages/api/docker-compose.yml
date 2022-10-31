@@ -17,7 +17,7 @@ services:
       MYSQL_ROOT_PASSWORD: 123456
       MYSQL_ROOT_HOST: "%"
       # Cria a base de dados
-      MYSQL_DATABASE: bemol
+      MYSQL_DATABASE: challenge
     expose:
       - "3306"
 
@@ -32,7 +32,7 @@ services:
       - /home/app/node_modules
     environment:
       DB_USER: root
-      DB_NAME: bemol
+      DB_NAME: challenge
       DB_PASS: 123456
       DB_HOST: mysql
       PORT: 3000
