@@ -86,20 +86,31 @@ A aplicação possui por hora possui apenas a rota de cadastro de usuário atrel
 Para executar aplicação é necessário que você possua o [Docker](https://docs.docker.com/desktop/install/windows-install/) em sua máquina e o [Plugin Docker Compose](https://docs.docker.com/compose/install/), após isso:
 
 1. Acesse este diretório (packages/api)
-2. Abra o Terminal na raiz do diretório
-3. Pare a execução de todos os volumes, imagens e containers, caso já possua o Docker e o Docker Componse
+2. Crie o arquivo ```.env``` na raiz do diretório e adicione as seguintes variáveis de ambiente
+    ```
+    DB_USER=root
+    DB_NAME=challenge
+    DB_PASS=123456
+    DB_HOST=mysql
+    PORT=3000
+    # TZ="-04:00"
+    JWT_SECRET=user_token
+    ```
+
+3. Abra o Terminal na raiz do diretório
+4. Pare a execução de todos os volumes, imagens e containers, caso já possua o Docker e o Docker Componse
    
    `docker system prune -a --volumes --images` ou `sudo docker system prune -a --volumes --images`
 
    e
 
    `docker compose down` ou `sudo docker compose down`
-4. Execute o seguinte comando
+5. Execute o seguinte comando
    `docker compose up` ou `sudo docker compose up`
    
    Com isso o Docker irá gerenciar a instalação das dependências da aplicação e definir as configurações da base de dados, desta forma você deve obter o seguinte resultado do MySQL sendo executando em um container Docker (destaque em branco)
    <img src="./img/01.png" alt="Instância MySQL no Docker Container"/>
    E o nosso servidor em outro container executando na porta 3000 conforme mostra a imagem abaixo
    <img src="./img/02.png" alt="Server no Docker Container"/>
-5. Caso a conexão do servidor ao MySQL não seja estabelecida, acesse o arquivo `server.ts` e com o teclado dê um `CTRL + S` para salvar e dar refresh na aplicação, dessa forma o servidor irá reconectar à base de dados
+6. Caso a conexão do servidor ao MySQL não seja estabelecida, acesse o arquivo `server.ts` e com o teclado dê um `CTRL + S` para salvar e dar refresh na aplicação, dessa forma o servidor irá reconectar à base de dados
 ````
