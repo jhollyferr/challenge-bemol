@@ -113,4 +113,4 @@ Para executar aplicação é necessário que você possua o [Docker](https://doc
    E o nosso servidor em outro container executando na porta 3000 conforme mostra a imagem abaixo
    <img src="./img/02.png" alt="Server no Docker Container"/>
 6. Caso a conexão do servidor ao MySQL não seja estabelecida, acesse o arquivo `server.ts` e com o teclado dê um `CTRL + S` para salvar e dar refresh na aplicação, dessa forma o servidor irá reconectar à base de dados
-````
+
