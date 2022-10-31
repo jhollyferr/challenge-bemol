@@ -28,6 +28,13 @@ B --> C(Client-Side)
 C --Request--> B
 ```
 
+## Diagramas C4 Model
+
+<img src="./img/01.png"/>
+<img src="./img/02.png"/>
+<img src="./img/03.png"/>
+
+
 ## Possíveis Novas Features
 Pensando na evolução do projeto com foco na escalabilidade, manutenibilidade e ciclo de vida de um produto de software é possivel que as seguintes features/configurações sejam implementadas/adotas
 - Monorepo: controle de versionamento, execução em paralelo dos pacotes, gerenciamento de módulos e dependências
