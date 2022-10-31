@@ -1,6 +1,6 @@
 # Challenge Web Bemol
 
-Este pacote é destinado a aplicação de client-side de nossa aplicação, tratando-se de uma aplicação web implementado com React JS
+Este pacote é destinado a aplicação de client-side de nossa aplicação, sendo uma aplicação web implementado com React JS
 
 > Obs: É importante que o server-side/api estejá em execução para que as requisições de cadastro sejam efetuadas com sucesso
 

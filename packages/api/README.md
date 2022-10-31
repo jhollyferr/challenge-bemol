@@ -13,9 +13,9 @@ Este pacote é destinado a aplicação de server-side de nossa aplicação, trat
 
 ## Arquitetura
 
-Adotando a fomosa arquitetura MVC (Model, View e Controller), o servidor irá gerir e gerenciar as regras de negócios de nossa aplicação, com o intuito de dividir e organizar a plicação em camadas.
+Adotando a arquitetura MVC (Model, View e Controller), o servidor irá gerenciar as regras de negócios de nossa aplicação, com o intuito de dividir e organizar a aplicação em camadas.
 A Model será a responsável por definir as nossas regras, criptografia, persistência de dados, receber disparos de eventos e gatilhos para captura ou inserção de dados.
-Já o Controller, deverá ser o ator que realizará os disparos de gatilhos e funcionalidades para a Model, enviando e obtendo informações da View (bosso Client-side) e/ou da API. Em nossa arquitetura iremos adicionar a API como ator, pois a mesma fará a comunicação com a nosso client-side.
+Já o Controller, deverá ser o ator que realizará os disparos de gatilhos e funcionalidades para a Model, enviando e obtendo informações da View (nosso Client-side) e/ou da API. Em nossa arquitetura iremos adicionar a API como ator, pois a mesma fará a comunicação com a nosso client-side.
 
 Abaixo um diagrama representando o nosso server-side
 
@@ -30,7 +30,7 @@ B --> C((API))
 
 ## Entidade X Relacionamento
 
-Esta aplicação possui duas tabelas relacionadas para a persistência de dados, através das mesmas é possível gerenciar as informações e fornece-las para as camadas de nível mais alto como os controllers e as views.
+Esta aplicação possui duas tabelas relacionadas para a persistência de dados, através das mesmas é possível gerenciar as informações e fornecê-las para as camadas de nível mais alto como os controllers e as views.
 
 Um usuário deverá possuir um endereço e, um endereço deve pertencer à um usuário, conforme o diagrama abaixo:
 
@@ -41,7 +41,7 @@ A[User] --> B[Address]
 
 ## Endpoints e Base URL
 
-A aplicação possui por hora possui apenas a rota de cadastro de usuário atrelado a um endereço, tendo como url: `http://localhost:3000/v1` e como endpoint: `POST /user`
+A aplicação possui por hora apenas a rota de cadastro de usuário atrelado a um endereço, tendo como base url: `http://localhost:3000/v1` e como endpoint: `POST /user`
 
 1. Exemplo de Requisição (Body JSON)
 ```
@@ -108,9 +108,10 @@ Para executar aplicação é necessário que você possua o [Docker](https://doc
 5. Execute o seguinte comando
    `docker compose up` ou `sudo docker compose up`
    
-   Com isso o Docker irá gerenciar a instalação das dependências da aplicação e definir as configurações da base de dados, desta forma você deve obter o seguinte resultado do MySQL sendo executando em um container Docker (destaque em branco)
+   Com isso o Docker irá gerenciar a instalação das dependências da aplicação e definir as configurações da base de dados, desta forma você deve obter o seguinte resultado do MySQL sendo executado em um container Docker (destaque em branco)
    <img src="./img/01.png" alt="Instância MySQL no Docker Container"/>
    E o nosso servidor em outro container executando na porta 3000 conforme mostra a imagem abaixo
    <img src="./img/02.png" alt="Server no Docker Container"/>
 6. Caso a conexão do servidor ao MySQL não seja estabelecida, acesse o arquivo `server.ts` e com o teclado dê um `CTRL + S` para salvar e dar refresh na aplicação, dessa forma o servidor irá reconectar à base de dados
-
+7. Caso a base de dados (DB_NAME) definida nas variáveis de ambiente não seja criada, acesse um gerenciador de banco de dados (DBeaver, MySQL Workbench ou qualquer outro) e, crie uma nova conexão MySQL com as crendenciais (DB_USER e DB_PASS) na porta padrão 3306, após isso crie a base de dados (DB_BAME) 
+    > obs: as informações que devem ser configuradas são os valores após o "=" de cada variável de ambiente 

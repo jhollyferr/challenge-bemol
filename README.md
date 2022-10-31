@@ -1,6 +1,6 @@
 # Challenge Bemol
 
-Este é um desafio **Software Engineer**, tradando-se de implementação de uma feature de cadastro de usuário com dois pacotes principais listados abaixo: 
+Este é um desafio para **Software Engineer**. Trata-se da implementação de uma feature de cadastro de usuário com dois pacotes principais listados abaixo: 
 - **API:** um App NodeJs com Sequelize ORM que disponibiliza uma rota de cadastro para o cliente web ([Veja mais detalhes](./packages/api/README.md))
 	> 
 - **Web:** fornece uma interface interativa de cadastro através de um formulário multi-etapas utilizando a API ([Veja mais detalhes](./packages/web/README.md)) 
@@ -36,7 +36,7 @@ C --Request--> B
 
 
 ## Possíveis Novas Features
-Pensando na evolução do projeto com foco na escalabilidade, manutenibilidade e ciclo de vida de um produto de software é possivel que as seguintes features/configurações sejam implementadas/adotas
+Pensando na evolução do projeto com foco na escalabilidade, manutenibilidade e ciclo de vida de um produto de software é possível que as seguintes features/configurações sejam implementadas/adotas
 - Monorepo: controle de versionamento, execução em paralelo dos pacotes, gerenciamento de módulos e dependências
 - API: upgrade da arquitetura MVC para lidar com Repository
 - Testes Unitários: afim de ser adaptável para executar a implentação de de novas features

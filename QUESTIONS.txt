@@ -7,7 +7,7 @@ possua N usuários, parte da aplicação deve ser em on-promise, já que a
 mesma deve gerenciar toda estrutura de segurança de dados dos seus usuários, 
 neste caso parte dessa solução deverá ser o server e o database.
 Quanto à aplicação client-side, pode ser disponibilizada em cloud, já
-que diversos serviços de terceiros já possuem configurações customizadas
+que diversos serviços de terceiros possuem configurações customizadas
 para produtos web.
 
 2. Considerando a participação de 4 pessoas técnicas para o desenvolvimento dessa
@@ -27,7 +27,7 @@ uma ferramenta ágil.
 Acredito que compartilhando ideais, definindo metas e objetivos a serem 
 realizados em determinados períodos e de ser flexével à melhorias e sugestões,
 com esses pontos há possibilidades de liderar uma equipe, porém
-metricas devem ser definidas por todos da equipe para haja evolução durante
+metricas devem ser definidas por todos da equipe para que haja evolução durante
 o ciclo de vida do produto 
 
 4. Se pudesse sugerir uma melhoria, mudança ou oportunidade. O que seria?
@@ -39,7 +39,7 @@ para os projetos atrelados aos mesmos.
 
 5. Acha válido esse desafio para o processo que está participando?
 
-Sim, aliás como toda pessoa atrelado à tecnologia pude obter informações
+Sim, aliás como toda pessoa atrelada à tecnologia pude obter informações
 e novos aprendizados durante a solução do desafio. 
-Pude praticar também alguns dos conceitos apreendidos em certificações e 
-formação academica.
+Pude praticar também alguns dos conceitos obtidos em certificações e 
+formação acadêmica.
