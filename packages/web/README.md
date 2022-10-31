@@ -26,7 +26,9 @@ Para executar aplicação é necessário que você possua o [NodeJs](https://www
 2. Abra o terminal na raiz deste diretório
 3. Instale as dependências com o seguinte comando `yarn`
 4. Execute a aplicação com `yarn dev`
+   
    Você téra o seguinte resultado
    <img src="./img/01.png" alt="Execução do Client-Side"/> 
+   
    Ao acessar o link da imagem em um navegador você terá a nossa página de cadastros funcionando e pronto pra execução
    <img src="./img/02.png" alt="Execução do Client-Side"/>
