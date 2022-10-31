@@ -10,6 +10,7 @@ export const connection: Sequelize = new Sequelize(
     dialect: "mysql",
     host: process.env.DB_HOST,
     port: +String(process.env.DB_PORT),
-    timezone: String(process.env.TZ),
+    // timezone: String(process.env.TZ),
   }
 );
+

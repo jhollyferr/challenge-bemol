@@ -1,17 +1,6 @@
 version: "3"
 
 services:
-  app:
-    container_name: challenge-app
-    build: .
-    command: yarn dev
-    ports:
-      - "3080:3000"
-    volumes:
-      - .:/usr/app
-    expose:
-      - "3080"
-
   mysql:
     container_name: challenge-mysql
     image: mysql:8.0.30
@@ -19,17 +8,43 @@ services:
       - seccomp:unconfined
     volumes:
       - "./.data/db:/var/lib/mysql"
-    # command: --default-authentication-plugin=mysql_native_password --sql_mode=NO_ENGINE_SUBSTITUTION,NO_AUTO_CREATE_USER --explicit_defaults_for_timestamp
+      # - ./init.sql:/docker-entrypoint-initdb.d/init.sql
     restart: always
     ports:
-      - "3310:3306"
+      - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: challenge
-      MYSQL_DATABASE: challenge
-      TZ: America/Manaus
+      #define acessos de usuário root
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_ROOT_HOST: "%"
+      # Cria a base de dados
+      MYSQL_DATABASE: bemol
     expose:
-      - "3310"
-      
+      - "3306"
+
+  api:
+    container_name: challenge-api
+    build: .
+    command: yarn dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/app
+      - /home/app/node_modules
+    environment:
+      DB_USER: root
+      DB_NAME: bemol
+      DB_PASS: 123456
+      DB_HOST: mysql
+      PORT: 3000
+      TZ: "-04:00"
+      JWT_SECRET: user_token
+    expose:
+      - "3000"
+    depends_on:
+      - mysql
+    links:
+      - mysql
+
 volumes:
   mysql:
     driver: local

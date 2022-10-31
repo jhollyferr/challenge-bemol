@@ -8,6 +8,6 @@ RUN yarn
 
 COPY . . 
 
-EXPOSE 3080
+EXPOSE 3000
 
 CMD yarn dev
