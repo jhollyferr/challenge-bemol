@@ -20,7 +20,7 @@ Este pacote é destinado a aplicação de client-side de nossa aplicação, send
 
 ## Executanto a aplicação
 
-Para executar aplicação é necessário que você possua o [NodeJs](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04) na versão 16.17.X e o [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable) na sua máquina
+Para executar aplicação é necessário que você possua o [NodeJs](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-20-04) na versão 16.18.X e o [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/#debian-stable) na sua máquina
 
 1. Acesse o ditetório WEB (packages/web)
 2. Abra o terminal na raiz deste diretório
