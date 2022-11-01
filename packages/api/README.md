@@ -83,7 +83,7 @@ A aplicação possui por hora apenas a rota de cadastro de usuário atrelado a u
 
 ## Executanto a aplicação
 
-Para executar aplicação é necessário que você possua o [Docker](https://docs.docker.com/desktop/install/windows-install/) em sua máquina e o [Plugin Docker Compose](https://docs.docker.com/compose/install/), após isso:
+Para executar aplicação é necessário que você possua o [Docker](https://docs.docker.com/desktop/install/windows-install/) em sua máquina e o [Plugin Docker Compose](https://docs.docker.com/compose/install/), Node (v16.18) e Yarn (v1.22) após isso:
 
 1. Acesse este diretório (packages/api)
 2. Crie o arquivo ```.env``` na raiz do diretório e adicione as seguintes variáveis de ambiente
@@ -105,13 +105,14 @@ Para executar aplicação é necessário que você possua o [Docker](https://doc
    e
 
    `docker compose down` ou `sudo docker compose down`
-5. Execute o seguinte comando
+5. Execute o comando `yarn`para instalar as dependências
+6. Execute o seguinte comando
    `docker compose up` ou `sudo docker compose up`
    
-   Com isso o Docker irá gerenciar a instalação das dependências da aplicação e definir as configurações da base de dados, desta forma você deve obter o seguinte resultado do MySQL sendo executado em um container Docker (destaque em branco)
+   Com isso o Docker irá gerenciar a instalação das dependências da aplicação e definir as configurações da base de dados em containers, desta forma você deve obter o seguinte resultado do MySQL sendo executado em um container Docker (destaque em branco)
    <img src="./img/01.png" alt="Instância MySQL no Docker Container"/>
    E o nosso servidor em outro container executando na porta 3000 conforme mostra a imagem abaixo
    <img src="./img/02.png" alt="Server no Docker Container"/>
-6. Caso a conexão do servidor ao MySQL não seja estabelecida, acesse o arquivo `server.ts` e com o teclado dê um `CTRL + S` para salvar e dar refresh na aplicação, dessa forma o servidor irá reconectar à base de dados
-7. Caso a base de dados (DB_NAME) definida nas variáveis de ambiente não seja criada, acesse um gerenciador de banco de dados (DBeaver, MySQL Workbench ou qualquer outro) e, crie uma nova conexão MySQL com as crendenciais (DB_USER e DB_PASS) na porta padrão 3306, após isso crie a base de dados (DB_BAME) 
+7. Caso a conexão do servidor ao MySQL não seja estabelecida, para a execução do docker e execute novamente o comando do **item 6**
+8. Caso a base de dados (DB_NAME) definida nas variáveis de ambiente não seja criada, acesse um gerenciador de banco de dados (DBeaver, MySQL Workbench ou qualquer outro) e, crie uma nova conexão MySQL com as crendenciais (DB_USER e DB_PASS) na porta padrão 3306, após isso crie a base de dados (DB_BAME) 
     > obs: as informações que devem ser configuradas são os valores após o "=" de cada variável de ambiente 

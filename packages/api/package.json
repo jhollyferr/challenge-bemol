@@ -2,8 +2,8 @@
   "name": "bemol-challenge-api",
   "version": "1.0.0",
   "engines": {
-    "node": "16.17.x",
-    "npm": "8.1 5.x"
+    "node": "16.18.x",
+    "npm": "8.19.x"
   },
   "scripts": {
     "dev": "tsnd --respawn ./src/server.ts",
