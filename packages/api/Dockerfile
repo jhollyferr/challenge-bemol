@@ -1,17 +1,21 @@
 FROM node:16.18-alpine
 
-ENV HOME=/home/app
+ENV HOME=/home/node
 
-COPY package*.json yarn.* #HOME/node_docker/
+RUN mkdir -p $HOME/app/node_modules
 
-WORKDIR $HOME/node_docker
+WORKDIR $HOME/app
+
+COPY package*.json yarn.* ./
+
+COPY . $HOME/app/
+
+RUN chown -R node:node $HOME
 
 RUN yarn 
 
-RUN yarn cache clean
-
-COPY . $HOME/node_docker 
+USER node
 
 EXPOSE 3000
 
-CMD ["yarn", "dev"]
+ENTRYPOINT ["yarn", "dev"]

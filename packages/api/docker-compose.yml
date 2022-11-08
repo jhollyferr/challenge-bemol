@@ -28,8 +28,8 @@ services:
     ports:
       - "3000:3000"
     volumes:
-      - .:/usr/app
-      - /home/app/node_modules
+      - .:/home/node/app
+      - /home/node/app/node_modules
     environment:
       DB_USER: root
       DB_NAME: challenge
@@ -40,6 +40,8 @@ services:
       JWT_SECRET: user_token
     expose:
       - "3000"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
     depends_on:
       - mysql
     links:
